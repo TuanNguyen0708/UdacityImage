@@ -1,4 +1,4 @@
-import imageRoute from './route/imageRoute'
+import imageRoute from './route/api/imageRoute'
 import express from 'express'
 
 const app = express()
