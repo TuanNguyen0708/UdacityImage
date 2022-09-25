@@ -3,7 +3,7 @@ import ImageFile from '../../utils/imageFile'
 
 
 interface ImageModal {
-  name: string,
+  filename: string,
   width: string,
   height: string,
 }
@@ -15,21 +15,21 @@ imageRoute.get('/api/image', async (req: Request, response: Response): Promise<v
     const width: number = parseInt(request.width)
     const height: number = parseInt(request.height)
 
-    if (isNaN(width) || width === 0) {
+    if (isNaN(width) || width === 0 || width < 0) {
       response.send({
         error: 'Width is required and width > 0'
       })
       return
     }
 
-    if (isNaN(height) || height === 0) {
+    if (isNaN(height) || height < 0 || height === 0) {
       response.send({
         error: 'Height is required and height > 0'
       })
       return
     }
 
-    const result: string = await ImageFile(request.name, width, height)
+    const result: string = await ImageFile(request.filename, width, height)
     if (result.length < 1) {
       response.send({
         error: 'File name is required'
