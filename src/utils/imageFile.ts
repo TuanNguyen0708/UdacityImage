@@ -21,7 +21,6 @@ const ImageFile = async (filename: string, width: number, height: number): Promi
     }).toFile(saveFile)
   }
   return `
-<div style="font-size: 20px; color: green">Resize Image Success</div>
 <img src="../../images/temporary/${imgName}" alt="Image Resize">
 `
 }

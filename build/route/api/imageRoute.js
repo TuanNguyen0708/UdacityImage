@@ -67,13 +67,13 @@ imageRoute.get('/api/image', function (req, response) { return __awaiter(void 0,
             case 1:
                 result = _b.sent();
                 if (result.length < 1) {
-                    console.log(result);
                     response.send({
                         error: 'File name is required'
                     });
                     return [2 /*return*/];
                 }
                 response.send(result);
+                console.log('Resize Image Success');
                 return [3 /*break*/, 3];
             case 2:
                 _a = _b.sent();

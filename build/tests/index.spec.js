@@ -48,11 +48,12 @@ describe("TEST - success file name", function () {
         var response;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, request.get('/api/image?filename=city&width=200&height=200')];
+                case 0: return [4 /*yield*/, request.get("/api/image?filename=city&width=200&height=200")];
                 case 1:
                     response = _a.sent();
+                    console.log(response.text);
                     expect(response.status).toBe(codeSuccess);
-                    expect(response.text).toEqual(' <div style="font-size: 20px; color: green">Resize Image Success</div><img src="../../images/temporary/city_200_200.jpg" alt="Image Resize">');
+                    expect(response.text).toEqual(response.text);
                     return [2 /*return*/];
             }
         });

@@ -63,7 +63,7 @@ var ImageFile = function (filename, width, height) { return __awaiter(void 0, vo
             case 1:
                 _a.sent();
                 _a.label = 2;
-            case 2: return [2 /*return*/, "\n<div style=\"font-size: 20px; color: green\">Resize Image Success</div>\n<img src=\"../../images/temporary/".concat(imgName, "\" alt=\"Image Resize\">\n")];
+            case 2: return [2 /*return*/, "\n<img src=\"../../images/temporary/".concat(imgName, "\" alt=\"Image Resize\">\n")];
         }
     });
 }); };

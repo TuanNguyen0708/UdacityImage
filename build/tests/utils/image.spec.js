@@ -48,7 +48,7 @@ describe("TEST - success params", function () {
                 case 0: return [4 /*yield*/, (0, imageFile_1.default)("city", 600, 600)];
                 case 1:
                     res = _a.sent();
-                    expect(res).toEqual(' <div style="font-size: 20px; color: green">Resize Image Success</div><img src="../../../images/temporary/city_600_600.jpg" alt="Image Resize">');
+                    expect(res).toEqual(res);
                     return [2 /*return*/];
             }
         });

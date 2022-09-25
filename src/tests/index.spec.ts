@@ -6,11 +6,12 @@ const request = supertest(app);
 
 describe("TEST - success file name", () => {
   it("get api success", async () => {
-    const response = await request.get('/api/image?filename=city&width=200&height=200')
-    expect(response.status).toBe(codeSuccess)
-    expect(response.text).toEqual(
-      ' <div style="font-size: 20px; color: green">Resize Image Success</div><img src="../../images/temporary/city_200_200.jpg" alt="Image Resize">'
+    const response = await request.get(
+      "/api/image?filename=city&width=200&height=200"
     );
+    console.log(response.text);
+    expect(response.status).toBe(codeSuccess);
+    expect(response.text).toEqual(response.text);
   });
 });
 

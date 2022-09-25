@@ -31,7 +31,6 @@ imageRoute.get('/api/image', async (req: Request, response: Response): Promise<v
 
     const result: string = await ImageFile(request.filename, width, height)
     if (result.length < 1) {
-      console.log(result);
       response.send({
         error: 'File name is required'
       })
@@ -39,6 +38,7 @@ imageRoute.get('/api/image', async (req: Request, response: Response): Promise<v
     }
 
     response.send(result)
+    console.log('Resize Image Success')
   } catch {
     response.send({
       error: 'Error'
