@@ -9,8 +9,8 @@
     "test": "npm run jasmine",
     "jasmine": "jasmine",
     "build": "npx tsc",
-    "lint": "eslint . --ext .ts --fix",
-    "prettier": "prettier --config .prettierrc '*.ts' --write"
+    "lint": "eslint . --ext .ts",
+    "prettify": "prettier --config .prettierrc.json --write"
   },
   "dependencies": {
     "express": "^4.18.1",
