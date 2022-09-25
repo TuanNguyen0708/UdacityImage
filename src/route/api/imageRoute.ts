@@ -31,6 +31,7 @@ imageRoute.get('/api/image', async (req: Request, response: Response): Promise<v
 
     const result: string = await ImageFile(request.filename, width, height)
     if (result.length < 1) {
+      console.log(result);
       response.send({
         error: 'File name is required'
       })
