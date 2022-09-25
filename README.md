@@ -5,12 +5,12 @@ Project by Udacity
 - Install: ```npm install```
 - Build: ```npx tsc```
 - Lint: ```npm run lint```
-- Run unit tests: ```npm run test```
+- Run unit tests: ```npm run jasmine```
 - Start server: ```npm run start```
 
 Installs required dependencies.
 
-### npm start
+### npm run start
 Runs the app and can be viewed at [http://localhost:9000]
 - http://localhost:9000/api/image?filename=city&width=400&height=400
 - http://localhost:9000/api/image?filename=city&width=400&height=400
