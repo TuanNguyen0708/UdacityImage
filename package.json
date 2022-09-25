@@ -6,7 +6,7 @@
   "author": "tuannd61",
   "scripts": {
     "start": "nodemon src/index.ts",
-    "test": "npm run build && npm run jasmine",
+    "test": "npm run test",
     "jasmine": "jasmine",
     "build": "npx tsc",
     "lint": "eslint . --ext .ts --fix",

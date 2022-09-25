@@ -5,7 +5,7 @@ Project by Udacity
 - Install: ```npm install```
 - Build: ```npx tsc```
 - Lint: ```npm run lint```
-- Run unit tests: ```npm run build && npm run jasmine```
+- Run unit tests: ```npm run test```
 - Start server: ```npm run start```
 
 Installs required dependencies.
