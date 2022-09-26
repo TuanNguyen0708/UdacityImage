@@ -10,7 +10,7 @@
     "jasmine": "jasmine",
     "build": "npx tsc",
     "lint": "eslint . --ext .ts",
-    "prettify": "prettier --config .prettierrc.json --write"
+    "prettify": "prettier --config .prettierrc.json 'src' --write"
   },
   "dependencies": {
     "express": "^4.18.1",
