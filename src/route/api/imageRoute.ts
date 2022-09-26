@@ -1,6 +1,5 @@
 import express, { Request, Response } from 'express';
 import ImageFile from '../../utils/imageFile';
-import { stringify } from 'querystring';
 
 interface ImageModal {
   filename: string;
@@ -16,7 +15,7 @@ imageRoute.get(
       const request: ImageModal = req.query as any as ImageModal;
       const width: number = parseInt(request.width);
       const height: number = parseInt(request.height);
-      const name: string = request.filename
+      const name: string = request.filename;
 
       if (isNaN(width) || width === 0 || width < 0) {
         response.send({
@@ -48,7 +47,6 @@ imageRoute.get(
       }
 
       response.send(result);
-      console.log('Resize Image Success');
     } catch {
       response.send({
         error: 'Error'
