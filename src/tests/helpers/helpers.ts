@@ -5,7 +5,7 @@ import {
 } from 'jasmine-spec-reporter';
 
 class ImageProject extends DisplayProcessor {
-  public displayJasmineStarted = (info, event: string): string => {
+  public displayJasmineStarted = (info: any, event: string): string => {
     return `${event}`;
   };
 }
