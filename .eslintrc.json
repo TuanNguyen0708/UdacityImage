@@ -14,7 +14,7 @@
     "ecmaVersion": 2020
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier"],
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "@typescript-eslint/no-inferrable-types": [0],
     "valid-jsdoc": "off",

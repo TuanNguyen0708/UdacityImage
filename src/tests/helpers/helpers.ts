@@ -1,7 +1,11 @@
-import { DisplayProcessor, SpecReporter, StacktraceOption } from 'jasmine-spec-reporter';
+import {
+  DisplayProcessor,
+  SpecReporter,
+  StacktraceOption
+} from 'jasmine-spec-reporter';
 
 class ImageProject extends DisplayProcessor {
-  public displayJasmineStarted =  (info, event: string): string => {
+  public displayJasmineStarted = (info, event: string): string => {
     return `${event}`;
   };
 }

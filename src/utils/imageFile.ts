@@ -1,7 +1,11 @@
 import fs from 'fs';
 import sharp from 'sharp';
 
-const ImageFile = async (filename: string, width: number, height: number): Promise<string> => {
+const ImageFile = async (
+  filename: string,
+  width: number,
+  height: number
+): Promise<string> => {
   const url = `../UdacityImage/images/full/${filename}.jpg`;
   const imgName = `${filename}_${width}_${height}.jpg`;
   const saveFile = `../UdacityImage/images/temporary/${imgName}`;
@@ -15,10 +19,12 @@ const ImageFile = async (filename: string, width: number, height: number): Promi
   }
 
   if (!fs.existsSync(saveFile)) {
-    await sharp(url).resize({
-      width,
-      height
-    }).toFile(saveFile);
+    await sharp(url)
+      .resize({
+        width,
+        height
+      })
+      .toFile(saveFile);
   }
   return `
 <img src="../../images/temporary/${imgName}" alt="Image Resize">
