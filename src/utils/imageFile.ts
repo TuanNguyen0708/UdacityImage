@@ -8,24 +8,18 @@ const ImageFile = async (
   height: number
 ): Promise<string> => {
   try {
-    const filePath = path.join(
-      __dirname,
-      `../../images/full/${filename}.jpg`
-    );
+    const filePath = path.join(__dirname, `../../images/full/${filename}.jpg`);
 
     const imgName = `${filename}_${width}_${height}.jpg`;
 
-    const saveFile = path.join(
-      __dirname,
-      `../../images/temporary/${imgName}`
-    );
+    const saveFile = path.join(__dirname, `../../images/temporary/${imgName}`);
 
     if (!fs.existsSync(filePath)) {
       return '';
     }
 
-    if (!fs.existsSync('../UdacityImage/images/temporary')) {
-      fs.mkdirSync('../UdacityImage/images/temporary');
+    if (!fs.existsSync(path.join(__dirname, '../../images/temporary'))) {
+      fs.mkdirSync(path.join(__dirname, '../../images/temporary'));
     }
 
     if (!fs.existsSync(saveFile)) {
