@@ -1,5 +1,6 @@
 import fs from 'fs';
 import sharp from 'sharp';
+import path from 'path';
 
 const ImageFile = async (
   filename: string,
@@ -7,11 +8,19 @@ const ImageFile = async (
   height: number
 ): Promise<string> => {
   try {
-    const url = `../UdacityImage/images/full/${filename}.jpg`;
-    const imgName = `${filename}_${width}_${height}.jpg`;
-    const saveFile = `../UdacityImage/images/temporary/${imgName}`;
+    const filePath = path.join(
+      __dirname,
+      `../../images/full/${filename}.jpg`
+    );
 
-    if (!fs.existsSync(url)) {
+    const imgName = `${filename}_${width}_${height}.jpg`;
+
+    const saveFile = path.join(
+      __dirname,
+      `../../images/temporary/${imgName}`
+    );
+
+    if (!fs.existsSync(filePath)) {
       return '';
     }
 
@@ -20,7 +29,7 @@ const ImageFile = async (
     }
 
     if (!fs.existsSync(saveFile)) {
-      await sharp(url)
+      await sharp(filePath)
         .resize({
           width,
           height
